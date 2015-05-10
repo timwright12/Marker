@@ -1,0 +1,77 @@
+.markers {
+  
+}
+
+.markers-list {
+  @extend %is-clean;
+}
+
+.marker-item {
+  border-bottom: 1px solid $color-border;
+  padding: 12px 0 10px;
+  
+  &:first-child {
+    padding-top: 0;
+  }
+  
+}
+
+.marker-info {
+  @include inline-block;
+  width: 50%;
+}
+
+.marker-title {
+  display: block;
+  font-weight: 600;
+}
+
+.marker-source {
+  display: block;
+  color: $color-accent;
+  @include font-size(13);
+  
+  &:hover {
+    color: $color-highlight;
+  }
+  
+}
+
+.marker-tags {
+  @include inline-block;
+  width: 25%;
+  position: relative;
+  top: -10px;
+}
+
+.marker-list-tags {
+  @extend %is-clean;
+  @include font-size(11);
+}
+
+.marker-tag {
+  @include inline-block;
+  margin-right: 1px;
+  
+  > a {
+    background: $color-highlight;
+    color: $color-base;
+    border-radius: 5px;
+    padding: 3px 6px;
+    font-weight: 600;
+    
+    &:hover {
+      background: $color-accent;
+      text-decoration: none;
+    }
+    
+  }
+}
+
+.marker-rating {
+  @include inline-block;
+  width: 20%;
+  text-align: right;
+  position: relative;
+  top: -10px;
+}

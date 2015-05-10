@@ -1,0 +1,90 @@
+.main {
+  padding-left: 253px;
+  overflow: hidden;
+}
+
+.sidebar, .content {
+  float: left;
+  min-height: 100%;
+}
+
+.sidebar {
+  width: 253px;
+  background: $color-secondary;
+  color: $color-base;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow: auto;
+}
+
+.gutter {
+  padding: 18px 28px;
+  
+  @media screen and ( max-width: $breakpoint-large ) {
+    padding: 12px 18px;
+  }
+  
+}
+
+.content {
+  width: 100%;
+  background: $color-base;
+}
+
+.content-header {
+  background: $color-primary;
+  color: $color-base;
+  
+  .gutter {
+    padding: 18px 22px;
+    
+    @media screen and ( max-width: $breakpoint-large ) {
+      padding: 18px 18px;
+    }
+    
+  }
+
+} // .content-header
+
+.profile-photo {
+  @include inline-block(middle);
+  margin-right: 12px;
+  
+  img {
+    display: block;
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    text-align: center;
+    @include font-size(12);
+  }
+}
+
+.profile-info {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.profile-name {
+  margin: 0;
+  padding:0;
+  @include font-size(24);
+}
+
+.profile-user {
+  margin: 0;
+  padding:0;
+  @include font-size(14);
+  
+  a {
+    color: $color-base;
+    opacity: .75;
+    
+    &:hover {
+      opacity: 1;
+    }
+    
+  }
+}

@@ -1,0 +1,56 @@
+.nav {
+  color: $color-highlight;
+}
+
+.nav-list {
+  @extend %is-clean;
+  line-height: 2.5;
+  font-weight: 600;
+}
+
+.nav-item {
+  
+  > a {
+    color: $color-highlight;
+  }
+  
+  &.is-active > a {
+    color: $color-base;
+    font-weight: 700;
+  }
+  
+}
+
+.nav-sub-list {
+  margin: 0 0 10px 20px;
+  padding: 0;
+  list-style: none;
+  line-height: 2;
+  @include font-size(14);
+  font-weight: 400;
+}
+
+.nav-sub-item {
+  
+  > a {
+    color: $color-highlight;
+    @include inline-block(middle);
+    line-height: 23px;
+  }
+  
+  img {
+    height: 23px;
+    width: 23px;
+    display: block;
+    float: left;
+    margin-right: 10px;
+    border-radius: 23px;
+    
+  }
+  
+  &.is-active > a {
+    color: $color-base;
+    font-weight: 700;
+  }
+  
+}

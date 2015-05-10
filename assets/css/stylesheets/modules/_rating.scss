@@ -1,0 +1,70 @@
+.marker-rating {
+    button {
+    .js & {
+      @include move-off-screen;
+    }
+  }
+}
+
+.rating {
+  padding: 0;
+  border: 0;
+  @include font-size(20);
+  position: relative;
+  top: 3px;
+  
+  > legend {
+    @include move-off-screen;
+  }
+  
+  &:not(:checked) {
+    
+    > input {
+      position:absolute;
+      top:-9999px;
+      clip:rect(0,0,0,0);
+      
+      &:checked ~ label {
+        color: $color-action;
+      }
+      
+    }
+    
+    > label {
+      float:right;
+      width: 1em;
+      padding:0 .1em;
+      overflow: hidden;
+      white-space: nowrap;
+      cursor: pointer;
+      line-height :1;
+      color: #ddd;
+      
+      &:hover,
+      &:hover ~ label {
+        color: lighten($color-action, 20);
+      }
+
+      &:active {
+        position:relative;
+        top:2px;
+        left:2px;
+      }
+      
+      &:before {
+        content: '★ ';
+      }
+      
+    }
+    
+  } // not checked
+  
+  > input:checked + label:hover,
+  > input:checked + label:hover ~ label,
+  > input:checked ~ label:hover,
+  > input:checked ~ label:hover ~ label,
+  > label:hover ~ input:checked ~ label {
+    color: darken($color-action, 10);
+  }
+
+} // .rating

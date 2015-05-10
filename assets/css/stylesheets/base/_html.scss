@@ -1,0 +1,63 @@
+html {
+  height: 100%;
+  min-height: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-size: 100%;
+  font-family: $font-primary;
+  min-height: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+  @include font-size(36);
+  font-weight: 700;
+}
+
+h2 {
+  @include font-size(24);
+}
+
+h3 {
+  @include font-size(18);
+}
+
+h4 {
+  @include font-size(16);
+}
+
+h5 {
+  @include font-size(14);
+}
+
+p, ol, ul, table {
+  @include font-size(16); 
+}
+
+a {
+  color: $color-action;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+  
+}
+
+table {
+  
+}
+
+td, th {
+  
+}
+
+th {
+  
+}
+
+td {
+  
+}
