@@ -1,1 +1,3 @@
-null
+Run:
+- NPM install
+- grunt dev
